@@ -1,21 +1,30 @@
 apply plugin: 'java'
 apply plugin: 'checkstyle'
 
+jacocoTestReport {
+  reports {
+    xml.enabled false
+    csv.enabled false
+    html.destination "${buildDir}/jacocoHtml"
+  }
+}
+
 checkstyle {
-    toolVersion = "6.11"
-    configFile = file("../checkstyle.xml")
+  toolVersion = "6.11"
+  configFile = file("../checkstyle.xml")
 }
 
 repositories {
-    mavenCentral()
+  mavenCentral()
 }
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web:1.4.0.RELEASE")
+  compile("org.springframework.boot:spring-boot-starter-web:1.4.0.RELEASE")
+
+  testCompile("org.springframework.boot:spring-boot-starter-test:1.4.0.RELEASE")
 }
 
 task restRun(type: JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
-
-    main = 'io.github.synfirecloud.jpb.MainConfig'
+  classpath = sourceSets.main.runtimeClasspath
+  main = 'io.github.synfirecloud.jpb.MainConfig'
 }
