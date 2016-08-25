@@ -1,0 +1,34 @@
+task build(type: Exec) {
+    workingDir '.'
+    executable 'gulp'
+    args 'build'
+}
+
+task install(type: Exec) {
+    workingDir '.'
+    executable 'npm'
+    args 'install'
+}
+
+task npmClean(type: Exec) {
+    workingDir '.'
+    executable 'rm'
+    args '-rf','node_modules'
+}
+
+task gulpClean(type: Exec) {
+    workingDir '.'
+    executable 'gulp'
+    args 'clean'
+}
+
+task clean(dependsOn:[gulpClean]) {
+    println 'clean done.'
+}
+
+task uiRun(type: Exec) {
+    workingDir '.'
+    executable 'gulp'
+    args 'run'
+}
+

@@ -1,0 +1,4 @@
+include 'j-post-bar-core'
+include 'j-post-bar-rest'
+include 'j-post-bar-ui'
+

@@ -1,14 +1,12 @@
-.gradle
+# ignore gradle file
+.gradle/
 build/
 
-# Ignore Gradle GUI config
-gradle-app.setting
+# ignore idea file
+.idea/
 
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
+# ignore npm file
+node_modules/
 
-# Cache of project
-.gradletasknamecache
-
-# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
-# gradle/wrapper/gradle-wrapper.properties
+# ignore dist file
+dist/

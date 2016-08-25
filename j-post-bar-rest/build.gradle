@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'checkstyle'
+
+checkstyle {
+    toolVersion = "6.11"
+    configFile = file("../checkstyle.xml")
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:1.4.0.RELEASE")
+}
+
+task restRun(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+
+    main = 'io.github.synfirecloud.jpb.MainConfig'
+}

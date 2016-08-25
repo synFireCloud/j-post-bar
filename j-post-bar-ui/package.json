@@ -1,0 +1,11 @@
+{
+  "name": "j-post-bar-ui",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7"
+  }
+}
