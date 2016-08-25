@@ -1,14 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'checkstyle'
 
-jacocoTestReport {
-  reports {
-    xml.enabled false
-    csv.enabled false
-    html.destination "${buildDir}/jacocoHtml"
-  }
-}
-
 checkstyle {
   toolVersion = "6.11"
   configFile = file("../checkstyle.xml")
